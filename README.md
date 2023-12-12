@@ -6,7 +6,7 @@
 
 ## 使用方法
 
-将shellcode放入1.txt
+将shellcode放入shellcode.txt
 
 使用任意http服务器实现远程文件下载功能，将生成的文件
 
@@ -16,11 +16,7 @@
 
 然后使用pyinstaller打包loader.py
 
-命令如下
-
-pyinstaller -F -w loader.py
-
-注意，想实现当loader.txt目录下存在kygvseedc.txt时才会运行payload，否则运行正常程序
+注意，想实现当loader.exe目录下存在kygvseedc.txt时才会运行payload，否则运行正常程序
 
 ## 免杀效果
 
